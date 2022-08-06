@@ -14,4 +14,7 @@ Application shows current weather with animation on top of screen, hourly weathe
 
 ### Example of work
 
-![](https://github.com/vbrovenk/IOS-Apps/blob/master/WeatherShow/imgs/Kyiv_weather.png)  |  ![](https://github.com/vbrovenk/IOS-Apps/blob/master/WeatherShow/imgs/Washington_weather.png)
+<div style="display: flex; justify-content: space-around;">
+  <img src="https://github.com/vbrovenk/IOS-Apps/blob/master/WeatherShow/imgs/Kyiv_weather.png" width="40%" />
+  <img src="https://github.com/vbrovenk/IOS-Apps/blob/master/WeatherShow/imgs/Washington_weather.png" width="40%" />
+</div>
