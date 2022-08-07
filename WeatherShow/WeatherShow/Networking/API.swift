@@ -10,8 +10,7 @@ import Foundation
 
 // connecting to API of website OpenWeather
 struct API {
-    // place for own API key
-    static let key = "58e501226b02e20c012ed922a5b37e1e"
+    static let key = "place for own API key"
     
     static let baseURLString = "https://api.openweathermap.org/data/2.5/"
     
