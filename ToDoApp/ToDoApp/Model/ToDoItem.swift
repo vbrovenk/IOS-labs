@@ -41,7 +41,11 @@ struct ToDoItem {
             self.priority = .middle
         }
         
-        self.deadLine = nil
+        if let date = jsonData["deadline"] as? Double {
+            self.deadLine = Date(timeIntervalSince1970: date)
+        } else {
+            self.deadLine = nil
+        }
     }
 }
 
@@ -57,6 +61,7 @@ extension ToDoItem {
         // add priority if > low
         if self.priority != .low {
             dataForEncode["priority"] = self.priority.rawValue
+            dataForEncode["deadline"] = self.deadLine?.timeIntervalSince1970
         }
 
         return dataForEncode

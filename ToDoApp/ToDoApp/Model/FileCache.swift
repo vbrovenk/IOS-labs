@@ -10,8 +10,10 @@ import Foundation
 class FileCache {
     var toDolist: [ToDoItem] = []
     
-    func addNewTask(task item: ToDoItem) {
-        toDolist.append(item)
+    func addNewTask(task item: ToDoItem?) {
+        if let newTask = item {
+            toDolist.append(newTask)
+        }
     }
     
     func deleteTask(taskId: String) {

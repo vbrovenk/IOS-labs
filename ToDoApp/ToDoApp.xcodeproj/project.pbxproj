@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0092CE290B0E1600CE97DC /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0092CD290B0E1600CE97DC /* AddTaskViewController.swift */; };
 		DD32FB882906DA9D00D2BD4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32FB872906DA9D00D2BD4E /* AppDelegate.swift */; };
 		DD32FB8A2906DA9D00D2BD4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32FB892906DA9D00D2BD4E /* SceneDelegate.swift */; };
 		DD32FB8C2906DA9D00D2BD4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32FB8B2906DA9D00D2BD4E /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD0092CD290B0E1600CE97DC /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		DD32FB842906DA9D00D2BD4E /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD32FB872906DA9D00D2BD4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD32FB892906DA9D00D2BD4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD0092CC290B0B5C00CE97DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD0092CD290B0E1600CE97DC /* AddTaskViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DD32FB7B2906DA9D00D2BD4E = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		DD32FB862906DA9D00D2BD4E /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				DD0092CC290B0B5C00CE97DC /* View */,
 				DD32FB9B2906DAC600D2BD4E /* Model */,
 				DD7B25B22908149B0014C316 /* Tasks.json */,
 				DD32FB872906DA9D00D2BD4E /* AppDelegate.swift */,
@@ -157,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD32FB8C2906DA9D00D2BD4E /* ViewController.swift in Sources */,
+				DD0092CE290B0E1600CE97DC /* AddTaskViewController.swift in Sources */,
 				DD32FB882906DA9D00D2BD4E /* AppDelegate.swift in Sources */,
 				DD32FB9D2906DB1200D2BD4E /* ToDoItem.swift in Sources */,
 				DD32FB9F2906DDA800D2BD4E /* FileCache.swift in Sources */,

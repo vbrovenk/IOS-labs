@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var fileCache = FileCache()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,24 +18,27 @@ class ViewController: UIViewController {
                      ToDoItem(id: "2", text: "Play", priority: .high, deadLine: nil)]
         
         
-        var fileCache = FileCache()
-        fileCache.addNewTask(task: tasks[0])
-        fileCache.addNewTask(task: tasks[1])
-        print("LIST: \(fileCache.toDolist)")
-        print("===================================")
-//        fileCache.writeTasksToAppFile(fileName: "forWriting.json")
-        fileCache.deleteTask(taskId: "1")
-        fileCache.deleteTask(taskId: "2")
-        print("LIST: \(fileCache.toDolist)")
-        print("===================================")
         
-        fileCache.readTasksFromAppFile(fileName: "forWriting.json")
         print("LIST: \(fileCache.toDolist)")
+//        print("===================================")
+//        fileCache.deleteTask(taskId: "1")
+//        fileCache.deleteTask(taskId: "2")
         
-        
+//        
+//        fileCache.readTasksFromAppFile(fileName: "forWriting.json")
+//        print("LIST: \(fileCache.toDolist)")
         
     }
+    
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueAddTask" {
+            if let destination = segue.destination as? AddTaskViewController {
+                destination.delegate = self
+//                destination.modalPresentationStyle = .fullScreen
+            }
+        }
+    }
 
 }
 
