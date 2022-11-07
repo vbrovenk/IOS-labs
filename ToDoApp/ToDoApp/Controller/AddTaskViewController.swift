@@ -11,7 +11,7 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var taskTextView: UITextView!
     @IBOutlet weak var priorityControl: UISegmentedControl!
     @IBOutlet weak var deadlineSwitch: UISwitch!
-    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
     
     let placeholder = "Input your task here"
@@ -28,14 +28,14 @@ class AddTaskViewController: UIViewController {
         taskTextView.text = placeholder
         taskTextView.layer.cornerRadius = 15
         
-        saveButton.isEnabled = false
+        addButton.isEnabled = false
     }
     
     @IBAction func cancelButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func saveTaskButton(_ sender: Any) {
+    @IBAction func addTaskButton(_ sender: Any) {
         var dateOfDeadline: Date? = nil
         
         if deadlineSwitch.isOn {
@@ -48,6 +48,7 @@ class AddTaskViewController: UIViewController {
                            deadLine: dateOfDeadline)
 
         delegate?.fileCache.addNewTask(task: newTask)
+        delegate?.tasksTableView.reloadData()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -85,9 +86,9 @@ extension AddTaskViewController: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         if textView.text.isEmpty {
-            saveButton.isEnabled = false
+            addButton.isEnabled = false
         } else {
-            saveButton.isEnabled = true
+            addButton.isEnabled = true
         }
     }
 }
